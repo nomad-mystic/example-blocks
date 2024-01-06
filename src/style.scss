@@ -1,0 +1,23 @@
+.InterviewBlockCards {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	margin-inline: auto;
+	margin-block: 24px;
+
+	@media screen and (min-width: 960px) {
+		display: grid;
+	}
+
+	&.has-2-columns {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	&.has-3-columns {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	&.has-4-columns {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+}

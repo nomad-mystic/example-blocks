@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "interview-10up/cards",
+	"version": "0.1.0",
+	"title": "10up Cards",
+	"category": "design",
+	"icon": "layout",
+	"description": "Example card block for 10up interview.",
+	"example": {},
+	"keywords": [
+		"Cards",
+		"Interview",
+		"10up"
+	],
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"columns": {
+			"type": "number",
+			"default": 3
+		}
+	},
+	"textdomain": "interview-10up",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css"
+}
