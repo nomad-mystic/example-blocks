@@ -4,7 +4,7 @@
 
 ## What is it:
 
-A plugin that creates a new blocks.
+A plugin that creates new blocks.
 
 ## What does it do:
 
