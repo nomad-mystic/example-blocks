@@ -1,6 +1,6 @@
 # Gutenberg block(s)
 
-Example repo for demonstrating my skills at building simple Gutenberg blocks.
+Example repo for demonstrating my skills at building Gutenberg blocks.
 
 ## Files/Components of interest
 
