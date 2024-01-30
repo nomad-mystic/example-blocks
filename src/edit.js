@@ -40,13 +40,13 @@ export default function Edit({ attributes, setAttributes }) {
 	return (
 		<section
 			{ ...useBlockProps({
-				className: `InterviewBlockCards has-${ columns }-columns`,
+				className: `NomadBlockCards has-${ columns }-columns`,
 			}) }
 		>
 			<InspectorControls>
 				<PanelBody>
 					<RangeControl
-						label={ __('Columns', 'interview-10up') }
+						label={ __('Columns', 'nomad-blocks') }
 						min={ 2 }
 						max={ 4 }
 						onChange={ onChangeColumns }
@@ -56,12 +56,12 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 
 			<InnerBlocks
-				allowedBlocks={ ['interview-10up/card'] }
+				allowedBlocks={ ['nomad/card'] }
 				orientation="horizontal"
 				template={ [
-					['interview-10up/card'],
-					['interview-10up/card'],
-					['interview-10up/card'],
+					['nomad/card'],
+					['nomad/card'],
+					['nomad/card'],
 				] }
 			/>
 		</section>

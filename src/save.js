@@ -19,7 +19,7 @@ export default function Save({ attributes }) {
 
 	return (
 		<section { ...useBlockProps.save({
-			className: `InterviewBlockCards has-${ columns }-columns`,
+			className: `NomadBlockCards has-${ columns }-columns`,
 		}) }>
 			<InnerBlocks.Content />
 		</section>

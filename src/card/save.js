@@ -21,22 +21,22 @@ export default function Save({ attributes }) {
 
 	return (
 		<article { ...useBlockProps.save({
-			className: 'InterviewBlockCard',
+			className: 'NomadBlockCard',
 		}) }>
-			<header className="InterviewBlockCard-header">
-				<figure className="InterviewBlockCard-figure">
+			<header className="NomadBlockCard-header">
+				<figure className="NomadBlockCard-figure">
 					<img
 						src={ url }
 						alt={ alt }
-						className="InterviewBlockCard-image"
+						className="NomadBlockCard-image"
 					/>
 				</figure>
 
-				<RichText.Content tagName="h4" value={ title } className="InterviewBlockCard-title" />
+				<RichText.Content tagName="h4" value={ title } className="NomadBlockCard-title" />
 
 			</header>
 
-			<RichText.Content tagName="p" value={ body } className="InterviewBlockCard-body" />
+			<RichText.Content tagName="p" value={ body } className="NomadBlockCard-body" />
 		</article>
 	);
 }

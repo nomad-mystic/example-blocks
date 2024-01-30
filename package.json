@@ -1,8 +1,8 @@
 {
-	"name": "interview-10up",
+	"name": "@nomadmystic/example-blocks",
 	"version": "0.1.0",
-	"description": "Example block for 10up interview",
-	"author": "The WordPress Contributors",
+	"description": "Example Nomad blocks",
+	"author": "nomadmystics@gmail.com",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"scripts": {

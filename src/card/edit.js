@@ -65,7 +65,7 @@ export default function Edit({ attributes, setAttributes }) {
 
 	return (
 		<article { ...useBlockProps({
-			className: `InterviewBlockCard`,
+			className: `NomadBlockCard`,
 		}) }>
 			<InspectorControls>
 				<PanelBody>
@@ -79,11 +79,11 @@ export default function Edit({ attributes, setAttributes }) {
 				</PanelBody>
 			</InspectorControls>
 
-			<header className="InterviewBlockCard-header">
+			<header className="NomadBlockCard-header">
 				{
 					url && (
-						<figure className="InterviewBlockCard-figure">
-							<img src={ url } alt={ alt } className="InterviewBlockCard-image" />
+						<figure className="NomadBlockCard-figure">
+							<img src={ url } alt={ alt } className="NomadBlockCard-image" />
 						</figure>
 					)
 				}
@@ -94,7 +94,7 @@ export default function Edit({ attributes, setAttributes }) {
 					onChange={ onChangeTitle }
 					value={ title }
 					allowedFormats={ [] }
-					className="InterviewBlockCard-title"
+					className="NomadBlockCard-title"
 				/>
 			</header>
 
@@ -104,7 +104,7 @@ export default function Edit({ attributes, setAttributes }) {
 				onChange={ onChangeBody }
 				value={ body }
 				allowedFormats={ ['core/bold', 'core/italic'] }
-				className="InterviewBlockCard-body"
+				className="NomadBlockCard-body"
 			/>
 		</article>
 	);

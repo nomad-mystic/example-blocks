@@ -1,20 +1,19 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "interview-10up/card",
+	"name": "nomad/card",
 	"parent": [
-		"interview-10up/cards"
+		"nomad/cards"
 	],
-	"version": "0.1.0",
-	"title": "10up Card",
+	"version": "1.0.0",
+	"title": "Nomad Card",
 	"category": "design",
 	"icon": "book",
-	"description": "Example card block for 10up interview.",
+	"description": "Example card block for demonstrating block skills",
 	"example": {},
 	"keywords": [
 		"Card",
-		"Interview",
-		"10up"
+		"Interview"
 	],
 	"supports": {
 		"html": false,
@@ -45,7 +44,7 @@
 			"selector": "p"
 		}
 	},
-	"textdomain": "interview-10up",
+	"textdomain": "nomad-blocks",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css"
 }
