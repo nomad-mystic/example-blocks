@@ -7,22 +7,24 @@ import {
 	useBlockProps,
 } from '@wordpress/block-editor';
 
-import {
-	PanelBody,
-	RangeControl,
-} from '@wordpress/components';
+import { PanelBody, RangeControl } from '@wordpress/components';
 
-// Internal
+// Styles
 import './editor.scss';
+
+// Types
+import { CardsParams } from './cards-types';
 
 /**
  * @description Create the edit functionality for the cards
  * @public
  * @author Keith Murphy | nomadmystics@gmail.com
  *
- * @return {React.JSX.Element}
+ * @param {CardsParams.attributes} attributes Our block attributes
+ * @param {CardsParams.setAttributes} setAttributes
+ * @return React.JSX.Element
  */
-export default function Edit({ attributes, setAttributes }) {
+export default function Edit( { attributes, setAttributes }: CardsParams ) {
 	// Extract
 	const { columns } = attributes;
 
@@ -31,22 +33,23 @@ export default function Edit({ attributes, setAttributes }) {
 	 * @public
 	 * @author Keith Murphy | nomadmystics@gmail.com
 	 *
+	 * @param {number | undefined} columns
 	 * @return void
 	 */
-	const onChangeColumns = (columns) => {
-		setAttributes({ columns });
+	const onChangeColumns = ( columns: number | undefined ) => {
+		setAttributes( { columns } );
 	};
 
 	return (
 		<section
-			{ ...useBlockProps({
+			{ ...useBlockProps( {
 				className: `NomadBlockCards has-${ columns }-columns`,
-			}) }
+			} ) }
 		>
 			<InspectorControls>
 				<PanelBody>
 					<RangeControl
-						label={ __('Columns', 'nomad-blocks') }
+						label={ __( 'Columns', 'nomad-blocks' ) }
 						min={ 2 }
 						max={ 4 }
 						onChange={ onChangeColumns }
@@ -56,12 +59,11 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 
 			<InnerBlocks
-				allowedBlocks={ ['nomad/card'] }
-				orientation="horizontal"
+				allowedBlocks={ [ 'nomad/card' ] }
 				template={ [
-					['nomad/card'],
-					['nomad/card'],
-					['nomad/card'],
+					[ 'nomad/card' ],
+					[ 'nomad/card' ],
+					[ 'nomad/card' ],
 				] }
 			/>
 		</section>
