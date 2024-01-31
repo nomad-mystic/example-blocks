@@ -7,18 +7,18 @@ Example repo for demonstrating my skills at building Gutenberg blocks.
 * block.json
 	* ./src/block.json
 	* ./src/card/block.json
-* save.js
-	* ./src/save.js
+* save.tsx
+	* ./src/save.tsx
       * `<InnerBlocks.Content />`
-	* ./src/card/save.js
+	* ./src/card/save.tsx
       * `<RichText.Content />`
-* edit.js
-	* ./src/edit.js
+* edit.tsx
+	* ./src/edit.tsx
       * `<InspectorControls />`
       * `<PanelBody />`
       * `<RangeControl />`
       * `<InnerBlocks />`
-	* ./src/card/edit.js
+	* ./src/card/edit.tsx
 		* `<PanelBody />`
 		* `<InspectorControls />`
 		* `<RichText />`
