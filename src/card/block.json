@@ -2,14 +2,19 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "nomad/card",
-	"parent": [ "nomad/cards" ],
+	"parent": [
+		"nomad/cards"
+	],
 	"version": "1.0.0",
 	"title": "Nomad Card",
 	"category": "design",
 	"icon": "book",
 	"description": "Example card block for demonstrating block skills",
 	"example": {},
-	"keywords": [ "Card", "Interview" ],
+	"keywords": [
+		"Card",
+		"Interview"
+	],
 	"supports": {
 		"html": false,
 		"reusable": false

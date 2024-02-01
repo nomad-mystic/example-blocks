@@ -8,7 +8,10 @@
 	"icon": "layout",
 	"description": "Example cards block for demonstrating block skills",
 	"example": {},
-	"keywords": [ "Cards", "Interview" ],
+	"keywords": [
+		"Cards",
+		"Interview"
+	],
 	"supports": {
 		"html": false
 	},

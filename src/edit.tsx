@@ -24,7 +24,7 @@ import { CardsParams } from './cards-types';
  * @param {CardsParams.setAttributes} setAttributes
  * @return React.JSX.Element
  */
-export default function Edit( { attributes, setAttributes }: CardsParams ) {
+export default function Edit({ attributes, setAttributes }: CardsParams) {
 	// Extract
 	const { columns } = attributes;
 
@@ -36,20 +36,20 @@ export default function Edit( { attributes, setAttributes }: CardsParams ) {
 	 * @param {number | undefined} columns
 	 * @return void
 	 */
-	const onChangeColumns = ( columns: number | undefined ) => {
-		setAttributes( { columns } );
+	const onChangeColumns = (columns: number | undefined) => {
+		setAttributes({ columns });
 	};
 
 	return (
 		<section
-			{ ...useBlockProps( {
+			{ ...useBlockProps({
 				className: `NomadBlockCards has-${ columns }-columns`,
-			} ) }
+			}) }
 		>
 			<InspectorControls>
 				<PanelBody>
 					<RangeControl
-						label={ __( 'Columns', 'nomad-blocks' ) }
+						label={ __('Columns', 'nomad-blocks') }
 						min={ 2 }
 						max={ 4 }
 						onChange={ onChangeColumns }
@@ -59,11 +59,11 @@ export default function Edit( { attributes, setAttributes }: CardsParams ) {
 			</InspectorControls>
 
 			<InnerBlocks
-				allowedBlocks={ [ 'nomad/card' ] }
+				allowedBlocks={ ['nomad/card'] }
 				template={ [
-					[ 'nomad/card' ],
-					[ 'nomad/card' ],
-					[ 'nomad/card' ],
+					['nomad/card'],
+					['nomad/card'],
+					['nomad/card'],
 				] }
 			/>
 		</section>

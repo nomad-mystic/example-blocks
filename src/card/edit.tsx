@@ -25,7 +25,7 @@ import { CardAttributes, CardParams, CardTypes } from './card-types';
  * @param {CardParams.setAttributes} setAttributes
  * @return React.JSX.Element
  */
-export default function Edit( { attributes, setAttributes }: CardParams ) {
+export default function Edit({ attributes, setAttributes }: CardParams) {
 	const { url, alt, title, body } = attributes as CardAttributes;
 
 	/**
@@ -36,8 +36,8 @@ export default function Edit( { attributes, setAttributes }: CardParams ) {
 	 * @param {string} title
 	 * @return void
 	 */
-	const onChangeTitle = ( title: string ): void => {
-		setAttributes( { title } );
+	const onChangeTitle = (title: string): void => {
+		setAttributes({ title });
 	};
 
 	/**
@@ -48,8 +48,8 @@ export default function Edit( { attributes, setAttributes }: CardParams ) {
 	 * @param {string} body
 	 * @return void
 	 */
-	const onChangeBody = ( body: string ): void => {
-		setAttributes( { body } );
+	const onChangeBody = (body: string): void => {
+		setAttributes({ body });
 	};
 
 	/**
@@ -60,31 +60,31 @@ export default function Edit( { attributes, setAttributes }: CardParams ) {
 	 * @param {CardTypes} image
 	 * @return void
 	 */
-	const onSelectImage = ( image: CardTypes ): void => {
+	const onSelectImage = (image: CardTypes): void => {
 		// Sanity check
-		if ( ! image || ! image.url ) {
-			setAttributes( { url: undefined, id: undefined, alt: '' } );
+		if (!image || !image.url) {
+			setAttributes({ url: undefined, id: undefined, alt: '' });
 
 			return;
 		}
 
-		setAttributes( { url: image.url, id: image.id, alt: image.alt } );
+		setAttributes({ url: image.url, id: image.id, alt: image.alt });
 	};
 
 	return (
 		<article
-			{ ...useBlockProps( {
+			{ ...useBlockProps({
 				className: `NomadBlockCard`,
-			} ) }
+			}) }
 		>
 			<InspectorControls>
 				<PanelBody>
 					<MediaPlaceholder
 						icon="admin-users"
 						onSelect={ onSelectImage }
-						onError={ ( err ) => console.error( err ) }
+						onError={ (err) => console.error(err) }
 						accept="image/*"
-						allowedTypes={ [ 'image' ] }
+						allowedTypes={ ['image'] }
 						onHTMLDrop={ undefined }
 					/>
 				</PanelBody>
@@ -102,7 +102,7 @@ export default function Edit( { attributes, setAttributes }: CardParams ) {
 				) }
 
 				<RichText
-					placeholder={ __( 'Card title\u2026' ) }
+					placeholder={ __('Card title\u2026') }
 					tagName="h4"
 					onChange={ onChangeTitle }
 					value={ title }
@@ -112,11 +112,11 @@ export default function Edit( { attributes, setAttributes }: CardParams ) {
 			</header>
 
 			<RichText
-				placeholder={ __( 'Card body\u2026' ) }
+				placeholder={ __('Card body\u2026') }
 				tagName="p"
 				onChange={ onChangeBody }
 				value={ body }
-				allowedFormats={ [ 'core/bold', 'core/italic' ] }
+				allowedFormats={ ['core/bold', 'core/italic'] }
 				className="NomadBlockCard-body"
 			/>
 		</article>

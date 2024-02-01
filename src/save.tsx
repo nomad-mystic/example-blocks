@@ -14,14 +14,14 @@ import { CardsParams } from './cards-types.ts';
  *
  * @return React.JSX.Element
  */
-export default function Save( { attributes }: CardsParams ) {
+export default function Save({ attributes }: CardsParams) {
 	const { columns } = attributes;
 
 	return (
 		<section
-			{ ...useBlockProps.save( {
+			{ ...useBlockProps.save({
 				className: `NomadBlockCards has-${ columns }-columns`,
-			} ) }
+			}) }
 		>
 			<InnerBlocks.Content />
 		</section>

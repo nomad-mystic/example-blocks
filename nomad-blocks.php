@@ -12,7 +12,7 @@
  * @package           nomad-blocks
  */
 
-if (!defined('ABSPATH')) {
+if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
@@ -23,9 +23,8 @@ if (!defined('ABSPATH')) {
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
-function nomad_blocks_nomad_blocks_block_init(): void
-{
-	register_block_type(__DIR__ . '/build');
+function nomad_blocks_nomad_blocks_block_init(): void {
+	register_block_type( __DIR__ . '/build' );
 }
 
-add_action('init', 'nomad_blocks_nomad_blocks_block_init');
+add_action( 'init', 'nomad_blocks_nomad_blocks_block_init' );

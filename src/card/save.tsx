@@ -15,14 +15,14 @@ import { CardAttributes } from './card-types';
  * @param {CardAttributes} attributes
  * @return React.JSX.Element
  */
-export default function Save( { attributes }: { attributes: CardAttributes } ) {
+export default function Save({ attributes }: { attributes: CardAttributes }) {
 	const { url, alt, title, body } = attributes;
 
 	return (
 		<article
-			{ ...useBlockProps.save( {
+			{ ...useBlockProps.save({
 				className: 'NomadBlockCard',
-			} ) }
+			}) }
 		>
 			<header className="NomadBlockCard-header">
 				<figure className="NomadBlockCard-figure">
